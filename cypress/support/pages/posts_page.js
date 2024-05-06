@@ -86,6 +86,12 @@ export default {
         cy.on('window:alert', (text) => {
             expect(text).to.contains(elements.validates.confirmation_message_delete_browser);
         });
+    },
+
+    validate_display_posts_of_others_users(username) {
+        cy.get('#root > div > main > section > article:nth-child(18) > section > span > h3')
+            .should('be.visible')
+            .should('not.have.text', username)
     }
 
 }

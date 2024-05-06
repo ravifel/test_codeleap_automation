@@ -64,7 +64,7 @@ describe('Posts Tests', () => {
     })
 
     it('Validate the display of posts from other users', () => {
-        posts_page.delete_post();
+        posts_page.validate_display_posts_of_others_users(username);
     })
 
 })
